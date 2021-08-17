@@ -15,8 +15,9 @@ console.assert(sumBuggy(1, 2) === 3); */
 
 let assertEqual = function(actual, expected) {
   if ( actual === expected ){
-    console.log("👍Assertion Passed: [" + actual + "] === [" + expected + "]");
-  } else{
+   // console.log("👍Assertion Passed: [" + actual + "] === [" + expected + "]");
+console.log(`Assertion passed: ${actual} === ${expected}`)
+  } else {
   console.log("🛑Assertion Failed: [" + actual + "] !== [" + expected + "]");
   }
 
@@ -25,3 +26,4 @@ let assertEqual = function(actual, expected) {
 // TEST CODE
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
+
