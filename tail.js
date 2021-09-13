@@ -1,21 +1,21 @@
 let assertEqual = function(actual, expected) {
-  if ( actual === expected ){
-   // console.log("👍Assertion Passed: [" + actual + "] === [" + expected + "]");
-console.log(`Assertion passed: ${actual} === ${expected}`)
+  if (actual === expected) {
+    // console.log("👍Assertion Passed: [" + actual + "] === [" + expected + "]");
+    console.log(`Assertion passed: ${actual} === ${expected}`);
   } else {
-  console.log("🛑Assertion Failed: [" + actual + "] !== [" + expected + "]");
+    console.log("🛑Assertion Failed: [" + actual + "] !== [" + expected + "]");
   }
 
 };
 
-let tail = function(array){
+let tail = function(array) {
   let answer = [];
 
-for(let i = 1; i < array.length; i++){
-  answer.push(array[i]);
+  for (let i = 1; i < array.length; i++) {
+    answer.push(array[i]);
   //return array[i];
-}
-return answer;
+  }
+  return answer;
 };
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words); // no need to capture the return value since we are not checking it
@@ -29,4 +29,9 @@ assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
 assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 
 // Test Case 2: ...
-// ...
+const ans = tail([1]);
+assertEqual(ans.length, 0); //empty array as there is only one element
+
+//Test Case 3:
+const empty = tail([]);
+assertEqual(empty.length, 0); //empty array should yield empty
