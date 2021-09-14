@@ -15,12 +15,12 @@ let result = false;
 
 if (arr1Length === arr2Length){
   result=true;
-  for(let i=0; i<arr1Length; i++){
-    if(arr1[i]===arr2[i]){
-      result=true;
+  for(let i = 0; i < arr1Length; i++){
+    if(arr1[i] === arr2[i]){
+      result = true;
       continue;
     }else{
-      result=false;
+      result = false;
     }
   }
 }
@@ -35,5 +35,5 @@ assertEqual(eqArrays([1, 2, 3], [3, 2, 1]),false); // => false
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]),true); // => true
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]),false); // => false  
 
-assertEqual(eqArrays([], [1]), false);
-assertEqual(eqArrays([], []), true);
+assertEqual(eqArrays([], [1]), false); // => false
+assertEqual(eqArrays([], []), true); // => true
