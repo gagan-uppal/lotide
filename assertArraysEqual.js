@@ -16,20 +16,21 @@ function eqArrays(arr1, arr2){
   let result = false;
   
   if (arr1Length === arr2Length){
-    result=true;
-    for(let i=0; i<arr1Length; i++){
-      if(arr1[i]===arr2[i]){
-        result=true;
+    result = true;
+    for(let i = 0; i < arr1Length; i++){
+      if(arr1[i] === arr2[i]){
+        result = true;
         continue;
-      }else{
-        result=false;
+      } else {
+        result = false;
       }
     }
   }
   
   return result;
-  
+
   };
+
   assertArraysEqual([],[]);
   assertArraysEqual([2,3,4],[]);
   assertArraysEqual([2,3,4],[2,3,4]);
