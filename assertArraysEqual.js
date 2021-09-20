@@ -1,3 +1,7 @@
+const eqArrays = require('../eqArrays');
+
+
+
 let assertArraysEqual = function(arr1, arr2) {
   //if array is same
   if ( eqArrays(arr1, arr2) ){
@@ -9,7 +13,9 @@ console.log(`Assertion passed: ${arr1} === ${arr2}`)
 
 };
 
-function eqArrays(arr1, arr2){
+module.exports = assertArraysEqual;
+
+/*const eqArrays = function (arr1, arr2){
   let arr1Length = arr1.length;
   let arr2Length = arr2.length;
   
@@ -29,12 +35,12 @@ function eqArrays(arr1, arr2){
   
   return result;
 
-  };
+  };*/
 
-  assertArraysEqual([],[]);
+  /*assertArraysEqual([],[]);
   assertArraysEqual([2,3,4],[]);
   assertArraysEqual([2,3,4],[2,3,4]);
-  assertArraysEqual([],[2,3,4]);
+  assertArraysEqual([],[2,3,4]);*/
   //assertArraysEqual([], undefined);
 
 
